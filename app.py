@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 app_ui = ui.page_fluid(
-    ui.input_slider("num_bins", "Number of Bins for Histogram", min=1, max=50, value=10),
+    ui.input_slider("num_bins", "Histogram and Scatter Plot in PyShiny App", min=1, max=50, value=10),
     ui.output_plot("hist_plot"),
     ui.output_plot("scatter_plot"),
 )
@@ -31,4 +31,3 @@ def server(input, output, session):
         return fig
 
 app = App(app_ui, server)
-
